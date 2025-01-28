@@ -6,7 +6,7 @@ import './App.css';
 
 const App = () => {
   return (
-    <Router>
+    <Router basename="/pers_inv">
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/message" element={<MessagePage />} />
