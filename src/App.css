@@ -1,0 +1,287 @@
+/* Global styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #ffe4e1;
+}
+
+/* LandingPage Styles */
+.landing-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffe4e1;
+  position: relative;
+  overflow: hidden;
+}
+
+.question {
+  font-size: 3rem;
+  color: #ff6b81;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 10;
+}
+
+.cat-images-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.cat-image {
+  position: absolute;
+  max-width: 200px;
+  max-height: 200px;
+  z-index: 1;
+  transition: transform 1s ease-out;
+}
+
+.button-container {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+.yes-button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease;
+}
+
+.yes-button:hover {
+  background-color: #45a049;
+}
+
+.no-button {
+  position: absolute;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.no-button:hover {
+  background-color: #e53935;
+}
+
+/* Countdown Styles */
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  font-size: 2.5em;
+  margin-top: 30px;
+  color: #ff6b81;
+}
+
+.countdown-item {
+  text-align: center;
+  animation: fadeIn 1s ease-out;
+}
+
+.countdown-item span {
+  font-size: 4em;
+  font-weight: bold;
+  color: #ff1493;
+  animation: bounce 1s infinite alternate;
+}
+
+.countdown-item p {
+  margin-top: 5px;
+  font-size: 1.2em;
+  color: #555;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Confetti Animation */
+.confetti-container {
+  position: absolute;
+  top: 10%;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.confetti-piece {
+  width: 10px;
+  height: 10px;
+  background-color: #f39c12;
+  margin: 5px;
+  border-radius: 50%;
+  animation: confetti 1s infinite;
+}
+
+@keyframes confetti {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Cat Dance Animation */
+.cat-dance {
+  margin-top: 20px;
+  animation: catDance 2s infinite;
+}
+
+.cat-dance-img {
+  width: 200px;
+  height: auto;
+  animation: shake 1s infinite;
+}
+
+@keyframes catDance {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(15deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(10px);
+  }
+}
+
+/* Balloon Animation */
+.balloon-container {
+  position: absolute;
+  bottom: 5%;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  pointer-events: none;
+}
+
+.balloon {
+  font-size: 3rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* MessagePage Styles */
+.message-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffdde1;
+}
+
+.message-header {
+  font-size: 4rem;
+  color: #e91e63;
+  margin-bottom: 1rem;
+}
+
+.message-text {
+  font-size: 1.5rem;
+  color: #555;
+}
+
+/* Replay Button */
+.replay-button {
+  background-color: #ff6b81;  /* Soft pink */
+  color: white;
+  border: none;
+  padding: 15px 40px;  /* Added more horizontal padding for a wider button */
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-top: 40px;
+  border-radius: 30px;  /* Rounded corners for a sleeker look */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
+  transition: all 0.3s ease;  /* Smooth transitions for multiple properties */
+}
+
+.replay-button:hover {
+  transform: scale(1.05);  /* Slightly smaller scale on hover for a more subtle effect */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);  /* Shadow becomes larger on hover */
+  background-color: #ff4f6e;  /* Darker shade of pink on hover */
+}
+
+.replay-button:active {
+  transform: scale(0.98);  /* Slight shrink when clicked for a button press effect */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  /* Less pronounced shadow on click */
+}
+
+.question {
+  text-align: center;
+}
+
+.greeting {
+  display: block;  /* Makes 'hi shresta!' appear on a new line */
+  font-size: 3rem;  /* Adjust the font size as needed */
+}
+
+.question-line {
+  display: block;  /* Ensures 'will you be my valentine?' is on a new line */
+  font-size: 5rem;  /* Adjust the font size as needed */
+  margin-top: 10px;  /* Optional: adds some space between the lines */
+}
+
