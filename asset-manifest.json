@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/pers_inv/static/css/main.176a67e5.css",
+    "main.js": "/pers_inv/static/js/main.0974e1d8.js",
+    "static/js/488.f11a51f1.chunk.js": "/pers_inv/static/js/488.f11a51f1.chunk.js",
+    "index.html": "/pers_inv/index.html",
+    "main.176a67e5.css.map": "/pers_inv/static/css/main.176a67e5.css.map",
+    "main.0974e1d8.js.map": "/pers_inv/static/js/main.0974e1d8.js.map",
+    "488.f11a51f1.chunk.js.map": "/pers_inv/static/js/488.f11a51f1.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.176a67e5.css",
+    "static/js/main.0974e1d8.js"
+  ]
+}
